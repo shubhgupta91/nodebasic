@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    {% include 'inc/header.twig' %}
+    {% block body %}{% endblock %}
+    {% include 'inc/footer.twig' %}
+  </body>
+    {% block javascript %}{% endblock %}
+</html>
