@@ -6,6 +6,8 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var methodOverride = require('method-override');
+var session = require('express-session');
+var flash = require('express-flash')
 
 const dotenv = require("dotenv");
 
@@ -21,7 +23,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-
+var sessionStore = new session.MemoryStore;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'twig');
@@ -35,6 +37,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(session({
+  cookie: { maxAge: 60000 },
+  store: sessionStore,
+  saveUninitialized: true,
+  resave: 'true',
+  secret: 'secret'
+}));
+app.use(flash());
 
 var mongoDB = process.env.DB_CONNECT;
 mongoose.connect(mongoDB, { useNewUrlParser: true,useUnifiedTopology: true });
