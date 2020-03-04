@@ -8,6 +8,12 @@ var mongoose = require("mongoose");
 
 const dotenv = require("dotenv");
 
+// var URL = require('url').URL;
+// var myURL = new URL('http://www.example.com/foo?bar=1#main');
+
+// console.log(myURL.host);
+
+
 dotenv.config();
 
 var indexRouter = require('./routes/index');

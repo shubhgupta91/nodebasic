@@ -1,4 +1,4 @@
-{{ dump(title) }}
+{{ dump(req.allParams()) }}
 <div class="topnav">
   <a class="{{ app.request.get('_route') == '/' ? 'active' }}" href="{{ app.request.getBaseURL() }}">Home</a>
   <a class="{{ app.request.get('_route') == '/user/login' ? 'active' }}" href="{{ app.request.getBaseURL() }}/user/login">Login</a>
