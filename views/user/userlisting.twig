@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+{% set headers = ['#','First Name','Last Name','Email','Mobile'] %}
+{% block body %}
+  <h1>{{title}}</h1>
+  <table>
+    <thead>
+      <tr>
+        {% for head in headers %} 
+          <th>{{ head }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    {% set inc = 1 %}
+    {% for user in users %} 
+      <tr>
+        <td>{{inc}}</td>
+        <td>{{ user.firstname|upper }}</td>
+        <td>{{ user.lastname|upper }}</td>
+        <td>{{ user.email|upper }}</td>
+        <td>{{ user.mobile }}</td>
+      </tr>
+    {% set inc = inc + 1 %}
+    {% endfor %}
+  </table>
+{% endblock %}
