@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
+var methodOverride = require('method-override');
 
 const dotenv = require("dotenv");
 
