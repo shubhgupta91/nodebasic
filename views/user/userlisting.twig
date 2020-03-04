@@ -1,5 +1,5 @@
 {% extends 'layout.twig' %}
-{% set headers = ['#','First Name','Last Name','Email','Mobile'] %}
+{% set headers = ['#','First Name','Last Name','Email','City','Mobile'] %}
 {% block body %}
   <h1>{{title}}</h1>
   <table>
@@ -17,6 +17,7 @@
         <td>{{ user.firstname|upper }}</td>
         <td>{{ user.lastname|upper }}</td>
         <td>{{ user.email|upper }}</td>
+        <td>{{ user.city|upper }}</td>
         <td>{{ user.mobile }}</td>
       </tr>
     {% set inc = inc + 1 %}
