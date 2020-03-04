@@ -24,4 +24,4 @@ var userregisterSchema = new mongoose.Schema({
     },
 });
 
-mongoose.model('Userregister', userregisterSchema);
+mongoose.model('Users', userregisterSchema);

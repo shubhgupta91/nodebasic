@@ -1,4 +1,4 @@
-var User = require('../models/users.model');
+var userModel = require('../models/users.model');
 mongoose = require('mongoose'), //mongo connection
 
 // Handle book create on POST.
@@ -11,7 +11,7 @@ exports.register = function(req, res) {
   var password = req.body.psw;
 
   //call the create function for our database
-  mongoose.model('Userregister').create({
+  mongoose.model('Users').create({
     firstname : firstname,
     lastname : lastname,
     email : email,
