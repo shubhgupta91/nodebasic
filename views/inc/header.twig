@@ -1,6 +1,17 @@
-<div class="topnav">
-  <a class="{{ app.request.get('_route') == '/' ? 'active' }}" href="{{ app.request.getBaseURL() }}">Home</a>
-	<a class="{{ app.request.get('_route') == '/' ? 'active' }}" href="{{ app.request.getBaseURL() }}">Users</a>
-  <a class="{{ app.request.get('_route') == '/user/login' ? 'active' }}" href="{{ app.request.getBaseURL() }}/user/login">Login</a>
-  <a class="{{ app.request.get('_route') == '/user/register' ? 'active' }}" href="{{ app.request.getBaseURL() }}/user/register">Register</a>
+<div class="topnav" id="topnav">
+  <a href="/">Home</a>
+	<a href="/user/listing">Users</a>
+  <a href="/user/login">Login</a>
+  <a href="/user/register">Register</a>
 </div>
+<script>
+const currentLocation = location.href;
+const menuItem = document.getElementById("topnav").querySelectorAll('a');
+const menuLength = menuItem.length;
+let i;
+for (i = 0; i < menuLength; i++) { 
+  if(menuItem[i].href != '' && menuItem[i].href === currentLocation){
+    menuItem[i].className = "active";
+  }
+}
+</script>
