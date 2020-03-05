@@ -21,15 +21,18 @@ exports.register = function(req, res) {
       res.send("There was a problem adding user into the database.");
     } else {
       console.log('POST creating new user: ' + user);
-      res.format({
-        html: function(){
-          res.location("user/listing");
-          res.redirect("/user/listing");
-        },
-        json: function(){
-          res.json(user);
-        }
-      });
+      // res.status(200).send({ message: 'User Created Successfully.' });
+      req.flash('success', 'User Created Successfully.');
+      res.redirect("/user/listing");
+      // res.format({
+      //   html: function(){
+      //     res.location("user/listing");
+      //     res.redirect("/user/listing");
+      //   },
+      //   json: function(){
+      //     res.json(user);
+      //   }
+      // });
     }
   });  
 };
