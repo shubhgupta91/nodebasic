@@ -53,7 +53,7 @@ db.once('open', () => console.log('Connected to MongoLab instance.'))
 db.on('error', error => console.log('Error connecting to MongoLab:', error));
 
 app.use('/', indexRouter);
-app.use('/user', usersRouter);
+app.use('/', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

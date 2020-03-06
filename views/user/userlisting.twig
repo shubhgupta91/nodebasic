@@ -1,8 +1,7 @@
 {% extends 'layout.twig' %}
 {% set headers = ['#','First Name','Last Name','Email','City','Mobile','Action'] %}
 {% block body %}
-  <h1>{{title}}</h1>
-
+  <h3>{{title}}</h3>
   <div class="userlistingserach"
     <form action="/userlistingsearch" id="userlistingsearchForm" class="userlistingsearchForm" method="post">
       <lable>By Name</lable>
@@ -31,7 +30,7 @@
         <td>{{ user.email|upper }}</td>
         <td>{{ user.city|upper }}</td>
         <td>{{ user.mobile }}</td>
-        <td><a class="btn btn-primary" href="user/{{ user.id }}/edit">Edit</a></td>
+        <td><a class="btn btn-primary" href="/profile/{{ user.id }}/edit">Edit</a></td>
       </tr>
     {% set inc = inc + 1 %}
     {% endfor %}

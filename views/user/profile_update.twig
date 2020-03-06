@@ -1,10 +1,10 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <form method="post" action="register">
+  <form method="post" action="profileupdate">
     <div class="container">
-      <h3>Register</h3>
-      <p>Please fill in this form to create an account.</p>
+      <h3>{{ title }}</h3>
+      <p>Please fill in this form to update user account.</p>
       <hr>
       <div class="row">
         <div class="col">
@@ -19,7 +19,7 @@
 
           <label for="mobile"><b>Mobile</b></label>
           <input type="text" placeholder="Enter mobile number" name="mobile" required>
-         </div> 
+        </div>
         <div class="col">
           <label for="city"><b>City</b></label>
           <input type="text" placeholder="Enter city name" name="city" required>
@@ -32,21 +32,15 @@
 
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw_repeat" required>
-        </div>  
-      </div>   
+        </div>
+      </div>
       <hr>
       <div class="row">
         <div class="col-sm-2">
-          <button type="submit" class="registerbtn">Register</button>
+          <button type="submit" class="registerbtn">Update</button>
         </div>
-        <div class="col-sm-10">
-          <div class="container signin">
-            <p>Already have an account? <a href="#">Sign in</a>.</p>
-          </div>
-        </div>
-      </div>          
+      </div>      
     </div>
 
-    
   </form>
 {% endblock %}
