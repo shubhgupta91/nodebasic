@@ -161,8 +161,9 @@ input[type=text]:focus, input[type=password]:focus {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #ffc107!important;
-  color: rgba(0, 0, 0, 0.5);
+  background-color: #120d40;
+  color: #fff;
   text-align: center;
+  padding: 10px 0px;
 }
 /********************* Footer Section End ***********************/
