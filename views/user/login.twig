@@ -1,6 +1,27 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <h3>{{title}}</h3>
-  <p>Welcome to {{title}}</p>
+  <form method="post" action="login">
+    <div class="container">
+      <h3>Login</h3>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>   
+      </div>   
+      <hr>
+      <div class="row">
+        <div class="col-sm-2">
+          <button type="submit" class="loginbtn">Login</button>
+        </div>
+      </div>          
+    </div>
+
+    
+  </form>
 {% endblock %}
