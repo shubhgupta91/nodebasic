@@ -11,6 +11,7 @@ router.get('/user/listing', user_controller.userlisting);
 router.get('/user/login', function(req, res, next) {
   res.render('user/login', { title: 'Login' });
 });
+router.post('/user/auth', user_controller.authentication);
 
 // User registration
 router.get('/user/register', function(req, res, next) {
