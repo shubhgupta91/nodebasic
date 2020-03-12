@@ -1,9 +1,49 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-warning static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/images/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto topnav" id="topnav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/user/listing">Users</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/user/login">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/user/register">Register</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!--
 <div class="topnav" id="topnav">
   <a href="/">Home</a>
 	<a href="/user/listing">Users</a>
   <a href="/user/login">Login</a>
   <a href="/user/register">Register</a>
 </div>
+-->
+
 <script>
 const currentLocation = location.href;
 const menuItem = document.getElementById("topnav").querySelectorAll('a');

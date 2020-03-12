@@ -8,20 +8,10 @@ var mongoose = require("mongoose");
 var methodOverride = require('method-override');
 var session = require('express-session');
 var flash = require('express-flash')
-
 const dotenv = require("dotenv");
-
-// var URL = require('url').URL;
-// var myURL = new URL('http://www.example.com/foo?bar=1#main');
-
-// console.log(myURL.host);
-
-
 dotenv.config();
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
 var app = express();
 var sessionStore = new session.MemoryStore;
 // view engine setup
