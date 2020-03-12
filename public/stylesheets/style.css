@@ -2,6 +2,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: -50px!important;
 }
 a {
   color: #00B7FF;
@@ -29,7 +30,8 @@ tr:nth-child(even) {
 /********************* Home Slideshow Start *********************/
 * {box-sizing:border-box}
 .slideshow-container {
-  max-width: 1250px;
+  /*max-width: 1250px;*/
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -125,9 +127,6 @@ tr:nth-child(even) {
 
 /********************* Login & Register Form Start *********************/
 * {box-sizing: border-box}
-.container {
-  padding: 16px;
-}
 input[type=text], input[type=password],input[type=file] {
   width: 100%;
   padding: 15px;
@@ -141,21 +140,17 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 .registerbtn {
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
   opacity: 0.9;
 }
 .registerbtn:hover {
   opacity:1;
-}
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
 }
 /********************* Login & Register Form End ***********************/
 
@@ -163,10 +158,9 @@ input[type=text]:focus, input[type=password]:focus {
 /********************* Footer Section Start *********************/
 .footer {
   position: fixed;
-  left: 50px;
-  right: 50px;
+  left: 0;
   bottom: 0;
-  width: 92.6%;
+  width: 100%;
   background-color: #ffc107!important;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
